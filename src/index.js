@@ -1,23 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-const getButtonText = () => {
-  return "this is button text"
-}
+import CommentDetail from './CommentDetail';
 
 const App = () => {
-  const buttonText = "Click Me!";
   return (
-    <div>
-      {/* 
-        you can use {} for accessing JS variables in JSX
-      */}
-      <button className="blue-button">{buttonText}</button>
-      {/* 
-        can call function also
-      */}
-      <button className="blue-button">{getButtonText()}</button>
+    <div className="ui container comments">
+      <CommentDetail/>
     </div>
   );
 }
