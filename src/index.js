@@ -2,15 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+const getButtonText = () => {
+  return "this is button text"
+}
+
 const App = () => {
+  const buttonText = "Click Me!";
   return (
     <div>
       {/* 
-        Below approach will work but to avoid collision with `class`
-        keyword from js we will use `className`
+        you can use {} for accessing JS variables in JSX
       */}
-      <button class="blue-button">This is button</button>
-      <button className="blue-button">Another button with className</button>
+      <button className="blue-button">{buttonText}</button>
+      {/* 
+        can call function also
+      */}
+      <button className="blue-button">{getButtonText()}</button>
     </div>
   );
 }
