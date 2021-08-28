@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 
 const App = () => {
   return (
     <div>
       {/* 
-        background-color => backgroundColor 
-        wrap style in {javascript object}
+        Below approach will work but to avoid collision with `class`
+        keyword from js we will use `className`
       */}
-      <button style={{backgroundColor: "blue", color: "white"}}>This is button</button>
+      <button class="blue-button">This is button</button>
+      <button className="blue-button">Another button with className</button>
     </div>
   );
 }
