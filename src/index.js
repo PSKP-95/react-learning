@@ -1,26 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import CommentDetail from './CommentDetail';
-import ApprovalCard from './ApprovalCard';
-import faker from 'faker';
 
 const App = () => {
+  window.navigator.geolocation.getCurrentPosition(
+    (position) => {
+      console.log(position);
+    },
+    (err) => console.log(err)
+  );
   return (
-    <div className="ui container comments">
-      <ApprovalCard>
-        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
-      </ApprovalCard>
-      <ApprovalCard>
-        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
-      </ApprovalCard>
-      <ApprovalCard>
-        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
-      </ApprovalCard>
-      <ApprovalCard>
-        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
-      </ApprovalCard>
-    </div>
+    <div>hi There: </div>
   );
 }
 
