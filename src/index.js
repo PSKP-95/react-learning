@@ -2,15 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 import faker from 'faker';
 
 const App = () => {
   return (
     <div className="ui container comments">
-      <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
-      <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
-      <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
-      <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
+      <ApprovalCard>
+        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail author={faker.name.firstName()} time={faker.date.past().toString()} comment={faker.lorem.sentence()}/>
+      </ApprovalCard>
     </div>
   );
 }
